@@ -6,7 +6,7 @@ After=network.target
 [Service]
 Type=simple
 Environment="APP_NAME=dummy-app"
-WorkingDirectory=/var/app/current/dummy-app
+WorkingDirectory=/var/app/current
 ExecStart=/usr/bin/bash -c "/var/app/current/entrypoint.sh >> /var/app/logs/dummy-app.log 2>&1"
 Restart=always
 RestartSec=3
