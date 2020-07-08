@@ -7,7 +7,7 @@ After=network.target
 Type=simple
 Environment="APP_NAME=dummy-app"
 WorkingDirectory=/var/app/current/dummy-app
-ExecStart=/usr/bin/zsh -c "/var/app/current/entrypoint.sh >> /var/app/logs/dummy-app.log 2>&1"
+ExecStart=/usr/bin/bash -c "/var/app/current/entrypoint.sh >> /var/app/logs/dummy-app.log 2>&1"
 Restart=always
 RestartSec=3
 
