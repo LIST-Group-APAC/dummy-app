@@ -13,6 +13,14 @@ we assume the following setup:
 2. t3.micro instance (free-tier eligible)
 3. a working SSH access
 
+now go to the AWS console and search for `EC2` and follow the guide below.
+
+1. Launch Instances
+2. select Ubuntu 20.04
+3. leave most of the settings to default, change them only if you know what you are doing
+4. create/select an SSH key, `chmod 400` on Unix systems if you created a new key.
+
+# into the unknown
 
 now remote to the machine using SSH and
 ```
@@ -42,6 +50,9 @@ git clone https://github.com/LIST-Group-APAC/dummy-app.git /var/app/current
 
 # change directory
 cd /var/app/current
+
+# install node packages
+yarn
 
 # setup nginx
 sudo cp .deploy/nginx.conf /etc/nginx
